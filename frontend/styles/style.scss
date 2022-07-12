@@ -23,17 +23,12 @@ body {
                     color: $navy;
                     font-weight: 500;
 
-                    &:hover {
-                        color: $lightNavy;
-                    }
-
                     &.active {
                         font-weight: bold;
-                        color: $navy;
+                    }
 
-                        &:hover {
-                            color: $lightNavy;
-                        }
+                    &:hover {
+                        color: $lightNavy;
                     }
                 }
             }

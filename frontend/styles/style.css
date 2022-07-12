@@ -11,14 +11,10 @@ body {
   color: #071C4D;
   font-weight: 500;
 }
-.navbar .collapse .navbar-nav .nav-item .nav-link:hover {
-  color: #13327a;
-}
 .navbar .collapse .navbar-nav .nav-item .nav-link.active {
   font-weight: bold;
-  color: #071C4D;
 }
-.navbar .collapse .navbar-nav .nav-item .nav-link.active:hover {
+.navbar .collapse .navbar-nav .nav-item .nav-link:hover {
   color: #13327a;
 }
 .navbar .collapse .btn-login {
