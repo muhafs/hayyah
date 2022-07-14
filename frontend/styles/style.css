@@ -133,4 +133,18 @@ header .btn-get-started:hover {
   color: #FFFFFF;
   background-color: #ffaf71;
   border-color: #ffaf71;
+}
+
+.section-networks {
+  background-color: #FFFFFF;
+  margin-top: -170px;
+  padding-top: 240px;
+  padding-bottom: 50px;
+}
+.section-networks h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+.section-networks img {
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
