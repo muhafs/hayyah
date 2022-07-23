@@ -359,6 +359,12 @@ header {
             color: $textGray;
         }
 
+        h3 {
+            font-weight: 500;
+            font-size: 14px;
+            color: $navy;
+        }
+
         .trip-information {
             th {
                 font-weight: 400;
@@ -371,12 +377,44 @@ header {
                 font-size: 18px;
                 color: $textGray;
             }
+
+            .text-blue {
+                color: $navy;
+                font-weight: bold;
+            }
+            
+            .text-orange {
+                color: $orange;
+                font-weight: bold;
+            }
         }
 
-        h3 {
-            font-weight: 600;
+        .payment-instructions {
+            font-weight: 300;
             font-size: 14px;
-            color: $navy;
+            color: $textGray;
+        }
+
+        .bank {
+            .bank-item {
+                h3 {
+                    font-size: 18px;
+                    color: $navy;
+                    margin-bottom: 0;
+                }
+
+                .description {
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $navy;
+                    }
+                }
+    
+                .bank-image {
+                    width: 45px;
+                }
+            }
         }
 
         .disclaimer {
@@ -489,3 +527,36 @@ header {
     }
 }
 // Header Ends
+
+.section-success {
+    height: 90vh;
+
+    img {
+        width: 266px;
+    }
+
+    h1 {
+        font-weight: 600;
+        font-size: 26px;
+        color: $navy;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        color: $textGray;
+    }
+
+    .btn-home-page {
+        border-radius: 4px;
+        background-color: $navy;
+        border-color: $navy;
+        color: $white;
+
+        &:hover {
+            background-color: $lightNavy;
+            border-color: $lightNavy;
+            color: $white;
+        }
+    }
+}
