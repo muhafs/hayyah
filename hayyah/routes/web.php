@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\Admin\DashboardController;
 
 Route::prefix('admin') // admin/*
     ->namespace('Admin') // Controller/Admin/*
+    ->middleware(['auth', 'admin'])
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     });
@@ -30,3 +32,5 @@ Route::get('/detail', [DetailController::class, 'index'])->name('detail');
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout-success');
+
+Auth::routes(['verify' => true]);
