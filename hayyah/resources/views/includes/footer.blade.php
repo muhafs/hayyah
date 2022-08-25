@@ -1,15 +1,60 @@
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; HAYYAH 2022</div>
+<!-- Footer Starts -->
+<footer class="section-footer mt-5 mb-4 border-top">
+    <div class="container pt-5 pb-5">
+        <div class="row jusify-content-center">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <h5>Features</h5>
 
-                        <div>
-                            <a href="#">Privacy Policy</a>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Reviews</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Social Media Kit</a></li>
+                            <li><a href="#">Affiliate</a></li>
+                        </ul>
+                    </div>
 
-                            &middot;
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <h5>Account</h5>
 
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Refund</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Rewards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <h5>Company</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <h5>Contact</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="#">Jakarta Selatan</a></li>
+                            <li><a href="#">Indonesia</a></li>
+                            <li><a href="#">0800 - 1111 - 2222</a></li>
+                            <li><a href="#">support@hayyah.id</a></li>
+                        </ul>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center border-top pt-4">
+            <div class="col-auto text-black fw-light">2022 Copyright Hayyah - All Right Reserved - Made in Batu
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Ends -->

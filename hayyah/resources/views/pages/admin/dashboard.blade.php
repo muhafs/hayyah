@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Dashboard')
+@section('title', 'Hayyah Admin | Dashboard')
 
 @section('content')
     <main>

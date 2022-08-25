@@ -3,7 +3,6 @@
 @section('title', 'Home Page')
 
 @section('content')
-
     <!-- Header Starts -->
     <header class="text-center">
         <h1>

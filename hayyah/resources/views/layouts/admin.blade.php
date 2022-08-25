@@ -11,28 +11,28 @@
     <title>@yield('title')</title>
 
     {{-- ! Stlye Start --}}
-    @include('includes.style')
+    @include('includes.admin.style')
 </head>
 
 <body class="sb-nav-fixed">
     {{-- ! Navbar Start --}}
-    @include('includes.navbar')
+    @include('includes.admin.navbar')
 
     <div id="layoutSidenav">
         {{-- ! Sidebar Start --}}
-        @include('includes.sidebar')
+        @include('includes.admin.sidebar')
 
         <div id="layoutSidenav_content">
             {{-- ! Content Start --}}
             @yield('content')
 
             {{-- ! Footer Start --}}
-            @include('includes.footer')
+            @include('includes.admin.footer')
         </div>
     </div>
 
     {{-- ! Script Start --}}
-    @include('includes.script')
+    @include('includes.admin.script')
 </body>
 
 </html>

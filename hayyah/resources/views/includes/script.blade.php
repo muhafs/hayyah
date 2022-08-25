@@ -1,8 +1,11 @@
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
-    <script src="{{ asset('backend/js/scripts.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('backend/assets/demo/chart-area-demo.js') }}"></script>
-    <script src="{{ asset('backend/assets/demo/chart-bar-demo.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="{{ asset('backend/js/datatables-simple-demo.js') }}"></script>
+<!-- JQuery JS -->
+<script src="{{ asset('frontend/libraries/jquery/jquery-3.6.0.min.js') }}"></script>
+<!-- Popper JS -->
+<!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+</script>
+<!-- Bootstrap JS -->
+<script src="{{ asset('frontend/libraries/bootstrap/js/bootstrap.js') }}"></script>
+<!-- Retina JS -->
+<script src="{{ asset('frontend/libraries/retina/retina.min.js') }}"></script>
