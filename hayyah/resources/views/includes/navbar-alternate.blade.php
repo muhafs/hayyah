@@ -3,8 +3,8 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <div class="navbar-nav ms-auto me-auto me-lg-0">
-                <a href="index.html" class="navbar-brand">
-                    <img src="frontend/images/logo.png" alt="">
+                <a href="{{ route('home') }}" class="navbar-brand">
+                    <img src="{{ url('frontend/images/logo-navy.png') }}" alt="">
                 </a>
             </div>
 
