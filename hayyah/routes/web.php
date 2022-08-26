@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TravelPackageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +19,17 @@ use App\Http\Controllers\Admin\DashboardController;
 |
 */
 
-
+//! Admin
 Route::prefix('admin') // admin/*
-    ->namespace('Admin') // Controller/Admin/*
+    // ->namespace('Admin') // Controller/Admin/*
     ->middleware(['auth', 'admin'])
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+        Route::resource('/travel-package', TravelPackageController::class);
     });
 
+//! User
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/detail', [DetailController::class, 'index'])->name('detail');
