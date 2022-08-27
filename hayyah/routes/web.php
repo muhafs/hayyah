@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TravelPackageController;
 
@@ -27,6 +28,7 @@ Route::prefix('admin') // admin/*
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::resource('/travel-package', TravelPackageController::class);
+        Route::resource('/gallery', GalleryController::class);
     });
 
 //! User

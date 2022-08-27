@@ -9,4 +9,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Gallery extends Model
 {
     use HasFactory, SoftDeletes;
+
+    protected $guarded = ['id'];
+
+    protected $hidden = [];
+
+    public function travel_package()
+    {
+        return $this->belongsTo(TravelPackage::class, 'travel_package_id', 'id');
+    }
 }

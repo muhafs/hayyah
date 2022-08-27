@@ -142,7 +142,10 @@
                             </div>
 
                             <div class="d-flex justify-content-between">
-                                <a href="{{ route('travel-package.index') }}" class="btn btn-danger">Kembali</a>
+                                <a href="{{ route('travel-package.index') }}" class="btn btn-danger">
+                                    <i class="fas fa-angle-left"></i> &nbsp;
+                                    Kembali
+                                </a>
 
                                 <button class="btn btn-primary">Simpan</button>
                             </div>

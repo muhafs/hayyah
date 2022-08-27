@@ -12,7 +12,7 @@
                             Dashboard
                         </a>
 
-                        <a class="nav-link  {{ Route::is('travel-package*') ? 'active' : '' }}"
+                        <a class="nav-link {{ Route::is('travel-package*') ? 'active' : '' }}"
                             href="{{ route('travel-package.index') }}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-tents"></i>
@@ -21,7 +21,8 @@
                             Paket Travel
                         </a>
 
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link {{ Route::is('gallery*') ? 'active' : '' }}"
+                            href="{{ route('gallery.index') }}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-images"></i>
                             </div>
