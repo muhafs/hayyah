@@ -5,7 +5,7 @@
 @section('content')
     <main>
         <div class="container-fluid px-4">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center mb-3">
                 <h1 class="mt-4">Paket Travel</h1>
 
                 <a href="{{ route('travel-package.create') }}" class="btn btn-sm btn-primary shadow-sm py-2 px-3">
@@ -14,10 +14,18 @@
                 </a>
             </div>
 
+            @if (session()->has('success'))
+                <div class="alert alert-success mb-3">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <div class="row">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered w-100" cellspacing="0">
+                        <table
+                            class="table table-sm table-dark table-striped table-hover table-bordered align-middle text-center w-100"
+                            cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -40,16 +48,17 @@
                                         <td>{{ $package->departure_date }}</td>
                                         <td>{{ $package->duration }}</td>
                                         <td class="text-center">
-                                            <a href="{{ route('travel-package.edit', $package->id) }}" class="btn btn-info">
+                                            <a href="{{ route('travel-package.edit', $package->id) }}"
+                                                class="btn btn-sm btn-info">
                                                 <i class="fas fa-pencil"></i>
                                             </a>
 
                                             <form action="{{ route('travel-package.destroy', $package->id) }}"
-                                                method="post" class="d-inline">
+                                                method="post" class="d-inline" onclick="return confirm('Are you sure?')">
                                                 @csrf
                                                 @method('delete')
 
-                                                <button class="btn btn-danger">
+                                                <button class="btn btn-sm btn-danger">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </form>
