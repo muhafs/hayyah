@@ -23,9 +23,23 @@ class GalleryRequest extends FormRequest
      */
     public function rules()
     {
+        // Method 1
+        if (request()->routeIs('gallery.store')) {
+            $imageRule = 'required';
+        } else if (request()->routeIs('gallery.update')) {
+            $imageRule = 'sometimes';
+        }
+
+        // Method 2
+        // if (request()->isMethod('post')) {
+        //     $imageRule = 'required';
+        // } else if (request()->isMethod('put')) {
+        //     $imageRule = 'sometimes';
+        // }
+
         return [
             'travel_package_id' => 'required|integer|exists:travel_packages,id',
-            'image' => 'required|image'
+            'image' => $imageRule . '|image'
         ];
     }
 }

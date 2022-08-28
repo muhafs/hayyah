@@ -17,7 +17,7 @@ class CreateGalleriesTable extends Migration
             $table->id();
 
             $table->foreignId('travel_package_id')->constrained();
-            $table->text('image');
+            $table->text('image')->nullable();
 
             $table->softDeletes();
             $table->timestamps();

@@ -12,7 +12,8 @@
             <div class="row justify-content-center mb-4 mt-3">
                 <div class="col-8 card shadow">
                     <div class="card-body">
-                        <form action="{{ route('gallery.update', $gallery->id) }}" method="post" class="row">
+                        <form action="{{ route('gallery.update', $gallery->id) }}" method="post" class="row"
+                            enctype="multipart/form-data">
                             @csrf
                             @method('put')
 

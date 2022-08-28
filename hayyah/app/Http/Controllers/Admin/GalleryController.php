@@ -85,15 +85,16 @@ class GalleryController extends Controller
      */
     public function update(GalleryRequest $request, Gallery $gallery)
     {
-        $data = $request->all();
-        // if ($request->hasFile('image')) {
-        //     if ($gallery->image != null && Storage::exists($gallery->image)) {
-        //         Storage::delete($gallery->image);
-        //     }
+        $data = $request->only('travel_package_id');
 
-        //     $data['image'] = $request->file('image')->store('assets/gallery', 'public');
-        // }
-        $data['image'] = $request->file('image')->store('assets/gallery', 'public');
+        if ($request->hasFile('image')) {
+            if ($gallery->image != null && Storage::disk('public')->exists($gallery->image)) {
+                Storage::disk('public')->delete($gallery->image);
+            }
+
+            $data['image'] = $request->file('image')->store('assets/gallery', 'public');
+        }
+        // $data['image'] = $request->file('image')->store('assets/gallery', 'public');
 
         $gallery->update($data);
         return redirect()->route('gallery.index');
@@ -107,6 +108,10 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
+        if ($gallery->image != null && Storage::disk('public')->exists($gallery->image)) {
+            Storage::disk('public')->delete($gallery->image);
+        }
+
         $gallery->delete();
 
         return redirect()->route('gallery.index')->with('success', 'Gallery Has been deleted successfully !');
