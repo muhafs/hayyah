@@ -30,7 +30,8 @@
                             Galari Travel
                         </a>
 
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link {{ Route::is('transaction*') ? 'active' : '' }}"
+                            href="{{ route('transaction.index') }}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-cash-register"></i>
                             </div>

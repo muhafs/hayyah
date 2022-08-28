@@ -1,16 +1,16 @@
 @extends('layouts.admin')
 
-@section('title', 'Hayyah Admin | Gallery')
+@section('title', 'Hayyah Admin | Transaction')
 
 @section('content')
     <main>
         <div class="container-fluid px-4">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <h1 class="mt-4">Galeri</h1>
+                <h1 class="mt-4">Transaksi</h1>
 
-                <a href="{{ route('gallery.create') }}" class="btn btn-sm btn-primary shadow-sm py-2 px-3">
+                <a href="{{ route('transaction.create') }}" class="btn btn-sm btn-primary shadow-sm py-2 px-3">
                     <i class="fas fa-plus"></i> &nbsp;
-                    Tambah Galeri
+                    Tambah Transaksi
                 </a>
             </div>
 
@@ -30,28 +30,37 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Travel</th>
-                                    <th>Image</th>
+                                    <th>User</th>
+                                    <th>Visa</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                @forelse ($galleries as $gallery)
+                                @forelse ($transactions as $transaction)
                                     <tr>
-                                        <td>{{ $gallery->id }}</td>
-                                        <td>{{ $gallery->travel_package->title }}</td>
-                                        <td>
-                                            <img src="{{ Storage::url($gallery->image) }}"
-                                                alt="{{ $gallery->travel_package->title }}" style="width: 150px"
-                                                class="img-thumbnail">
+                                        <td>{{ $transaction->id }}</td>
+                                        <td>{{ $transaction->travel_package->title }}</td>
+                                        <td>{{ $transaction->user->name }}</td>
+                                        <td>{{ $transaction->additional_visa }}</td>
+                                        <td>{{ $transaction->transaction_total }}</td>
+                                        <td>{{ ucwords(str_replace('_', ' ', strtolower($transaction->transaction_status))) }}
                                         </td>
                                         <td class="text-center">
-                                            <a href="{{ route('gallery.edit', $gallery->id) }}" class="btn btn-sm btn-info">
+                                            <a href="{{ route('transaction.show', $transaction->id) }}"
+                                                class="btn btn-sm btn-warning">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+
+                                            <a href="{{ route('transaction.edit', $transaction->id) }}"
+                                                class="btn btn-sm btn-info">
                                                 <i class="fas fa-pencil"></i>
                                             </a>
 
-                                            <form action="{{ route('gallery.destroy', $gallery->id) }}" method="post"
-                                                class="d-inline" onclick="return confirm('Are you sure?')">
+                                            <form action="{{ route('transaction.destroy', $transaction->id) }}"
+                                                method="post" class="d-inline" onclick="return confirm('Are you sure?')">
                                                 @csrf
                                                 @method('delete')
 

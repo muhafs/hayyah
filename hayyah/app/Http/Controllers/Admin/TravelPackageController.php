@@ -45,7 +45,7 @@ class TravelPackageController extends Controller
 
         TravelPackage::create($data);
 
-        return redirect()->route('travel-package.index');
+        return redirect()->route('travel-package.index')->with('success', 'Travel Package Has been created successfully !');
     }
 
     /**
@@ -84,7 +84,7 @@ class TravelPackageController extends Controller
 
         $travel_package->update($data);
 
-        return redirect()->route('travel-package.index');
+        return redirect()->route('travel-package.index')->with('success', 'Travel Package Has been updated successfully !');
     }
 
     /**

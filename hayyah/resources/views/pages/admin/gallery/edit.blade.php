@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Hayyah Admin | Edit Travel Package')
+@section('title', 'Hayyah Admin | Edit Gallery')
 
 @section('content')
     <main>

@@ -9,4 +9,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class TransactionDetail extends Model
 {
     use HasFactory, SoftDeletes;
+
+    protected $guarded = ['id'];
+
+    protected $hidden = [];
+
+    public function transaction()
+    {
+        return $this->belongsTo(Transaction::class, 'transaction_id', 'id');
+    }
 }

@@ -49,7 +49,7 @@ class GalleryController extends Controller
 
         Gallery::create($data);
 
-        return redirect()->route('gallery.index');
+        return redirect()->route('gallery.index')->with('success', 'Gallery Has been created successfully !');
     }
 
     /**
@@ -93,11 +93,17 @@ class GalleryController extends Controller
             }
 
             $data['image'] = $request->file('image')->store('assets/gallery', 'public');
+
+            // $data['image'] = $request->file('image')
+            //     ->storeAs(
+            //         'assets/gallery', // Path
+            //         'Test_' . $request->travel_package_id . '_' . $request->file('image')->extension(), // Name
+            //         'public' // Option
+            //     );
         }
-        // $data['image'] = $request->file('image')->store('assets/gallery', 'public');
 
         $gallery->update($data);
-        return redirect()->route('gallery.index');
+        return redirect()->route('gallery.index')->with('success', 'Gallery Has been updated successfully !');
     }
 
     /**

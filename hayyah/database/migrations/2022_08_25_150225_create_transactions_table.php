@@ -21,7 +21,7 @@ class CreateTransactionsTable extends Migration
 
             $table->integer('additional_visa');
             $table->integer('transaction_total');
-            $table->integer('transaction_status'); // IN_CART, PENDING, SUCCESS, CANCELED, FAILED
+            $table->string('transaction_status'); // IN_CART, PENDING, SUCCESS, CANCELED, FAILED
 
             $table->softDeletes();
             $table->timestamps();
