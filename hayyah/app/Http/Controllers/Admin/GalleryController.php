@@ -65,9 +65,10 @@ class GalleryController extends Controller
 
         // Store Thumbnail into its destination Path
         Image::make($image)
-            ->resize(300, 300, function ($constraint) {
-                $constraint->aspectRatio();
-            })
+            // ->resize(500, 500, function ($constraint) {
+            //     $constraint->aspectRatio();
+            // })
+            // ->crop(500, 500, 25, 25)
             ->save($destination_path . '/' . $image_name);
 
         // Get Full Path and store it into Database
@@ -136,9 +137,10 @@ class GalleryController extends Controller
 
             // Store Thumbnail into its destination Path
             Image::make($image)
-                ->resize(300, 300, function ($constraint) {
-                    $constraint->aspectRatio();
-                })
+                // ->resize(500, 500, function ($constraint) {
+                //     $constraint->aspectRatio();
+                // })
+                // ->crop(500, 500, 25, 25)
                 ->save($destination_path . '/' . $image_name);
 
             // Get Full Path and store it into Database
